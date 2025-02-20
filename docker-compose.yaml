@@ -1,0 +1,14 @@
+notification-forwarder:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    environment:
+      - PUSHBULLET_ACCESS_TOKEN=xxxxxxxxxxxxxxx
+      - GOTIFY_SERVER_URL=xxxxxxxxxx
+      - GOTIFY_ACCESS_TOKEN=xxxxxxxxxxxxxxxx
+    volumes:
+      - /home/notification-forwarder/data:/app/data
+    
