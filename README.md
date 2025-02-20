@@ -5,6 +5,11 @@ This is a lightweight web service that works as a Pushbullet or Gotify adaptor f
 1. Parses the notification and repackages it
 1. Forwards it again to either Pushbullet or Gotify.
 
+Once set up, simply add a new "forward target" in Notification Forwarder's settings: 
+
+- `http://notification-forwarder-url.com/forward?dest=pb` to forward to Pushbullet
+- `http://notification-forwarder-url.com/forward?dest=gotify` to forward to Gotify
+
 ## API
 
 ### Forward Notification
